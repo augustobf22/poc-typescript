@@ -16,7 +16,7 @@ async function updateMovie(movie: Movie) {
     return await connection.query<Movie>(`UPDATE movies SET title=$3 WHERE id=$1`,[movie.id, movie.title]);
 }
 
-async function deleteMovie(id: UpdateMovie) {
+async function deleteMovie(id: number) {
     return await connection.query<UpdateMovie>(`DELETE * FROM movies WHERE id=$1`, [id]);
 }
 

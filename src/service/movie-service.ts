@@ -14,7 +14,7 @@ async function updateMovie(movie: Movie): Promise<void> {
     await movieRepository.updateMovie(movie);
 }
 
-async function deleteMovie(id: UpdateMovie): Promise<void> {
+async function deleteMovie(id: number): Promise<void> {
     await movieRepository.deleteMovie(id);
 }
 

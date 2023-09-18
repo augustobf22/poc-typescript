@@ -14,14 +14,14 @@ function createMovie(req: Request, res: Response) {
 }
 
 function updateMovie(req: Request, res: Response) {
-  const { id } = req.params as UpdateMovie;
+  const id: number = Number(req.params.id);
   const { title } = req.body as CreateMovie;
   movieService.updateMovie({id, title});
   res.sendStatus(201);
 }
 
 function deleteMovie(req: Request, res: Response) {
-  const { id } = req.params as UpdateMovie;
+  const id: number = Number(req.params.id);
   movieService.deleteMovie(id);
   res.sendStatus(201);
 }
